@@ -1,0 +1,22 @@
+.notice {
+  background-color: #f2f7fc;
+  border: 1px solid #0090e3;
+  border-radius: 4px;
+  padding: 1.2rem;
+  position: relative
+}
+
+.notice--confirmation {
+  background-color: #e0f6e0;
+  border-color: #00b900
+}
+
+.notice--warning {
+  background-color: #fff9e6;
+  border-color: #ffae00
+}
+
+.notice--critical {
+  background-color: #ffe5e5;
+  border-color: #e50000
+}
