@@ -9,10 +9,7 @@ export class AppRoot {
   render() {
     return (
       <div>
-        <header>
-          <h1>Stencil App Starter</h1>
-        </header>
-
+        <cb-header></cb-header>
         <main>
           <cb-button>Button text</cb-button>
           <cb-notice>Notice text</cb-notice>

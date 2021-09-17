@@ -22,6 +22,8 @@ export namespace Components {
         "size"?: 'tiny' | 'small' | 'large';
         "type"?: 'secondary' | 'secondary-blue' | 'order' | 'transparent';
     }
+    interface CbHeader {
+    }
     interface CbNotice {
         "dismissible": boolean;
         "header": string;
@@ -48,6 +50,12 @@ declare global {
         prototype: HTMLCbButtonElement;
         new (): HTMLCbButtonElement;
     };
+    interface HTMLCbHeaderElement extends Components.CbHeader, HTMLStencilElement {
+    }
+    var HTMLCbHeaderElement: {
+        prototype: HTMLCbHeaderElement;
+        new (): HTMLCbHeaderElement;
+    };
     interface HTMLCbNoticeElement extends Components.CbNotice, HTMLStencilElement {
     }
     var HTMLCbNoticeElement: {
@@ -58,6 +66,7 @@ declare global {
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
         "cb-button": HTMLCbButtonElement;
+        "cb-header": HTMLCbHeaderElement;
         "cb-notice": HTMLCbNoticeElement;
     }
 }
@@ -79,6 +88,8 @@ declare namespace LocalJSX {
         "size"?: 'tiny' | 'small' | 'large';
         "type"?: 'secondary' | 'secondary-blue' | 'order' | 'transparent';
     }
+    interface CbHeader {
+    }
     interface CbNotice {
         "dismissible"?: boolean;
         "header"?: string;
@@ -89,6 +100,7 @@ declare namespace LocalJSX {
         "app-profile": AppProfile;
         "app-root": AppRoot;
         "cb-button": CbButton;
+        "cb-header": CbHeader;
         "cb-notice": CbNotice;
     }
 }
@@ -99,6 +111,7 @@ declare module "@stencil/core" {
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "cb-button": LocalJSX.CbButton & JSXBase.HTMLAttributes<HTMLCbButtonElement>;
+            "cb-header": LocalJSX.CbHeader & JSXBase.HTMLAttributes<HTMLCbHeaderElement>;
             "cb-notice": LocalJSX.CbNotice & JSXBase.HTMLAttributes<HTMLCbNoticeElement>;
         }
     }
